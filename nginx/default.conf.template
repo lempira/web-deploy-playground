@@ -1,6 +1,6 @@
 server {
     listen 80;
-    server_name ${DOMAIN} www.${DOMAIN};
+    server_name $DOMAIN www.$DOMAIN;
     server_tokens off;
 
     location /.well-known/acme-challenge/ {
@@ -14,18 +14,18 @@ server {
 
 server {
     listen 443 ssl;
-    server_name ${DOMAIN} www.${DOMAIN};
+    server_name $DOMAIN www.$DOMAIN;
     server_tokens off;
 
-    ssl_certificate /etc/letsencrypt/live/${DOMAIN}/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/${DOMAIN}/privkey.pem;
+    ssl_certificate /etc/letsencrypt/live/$DOMAIN/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/$DOMAIN/privkey.pem;
     include /etc/letsencrypt/options-ssl-nginx.conf;
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;    
     # To allow special characters in headers
     ignore_invalid_headers off;    
 
     location / {
-        root /var/www/${DOMAIN};
+        root /var/www/$DOMAIN;
         index index.html;        
     }    
 }
