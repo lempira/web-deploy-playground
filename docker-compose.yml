@@ -7,7 +7,6 @@ services:
     image: web-server
     environment:
       - DOMAIN=${DOMAIN}
-    command: tail -f /dev/null
     ports:
       - 80:80
       - 443:443
