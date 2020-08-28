@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.mainPanel {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  border: 1px solid tomato;
+}
+
+.imagePanel {
+  width: 50%;
+  /* height: 100%; */
+  display: flex;
+  justify-content: center;
+  border: 1px solid rebeccapurple;
+}
+
+.siteImage {
+  height: 100%;
+}
+
+.textPanel {
+  width: 50%;
+  /* height: 100%; */
+  border: 1px solid royalblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 184px;
+}
+
+.cite {
+  align-self: end;
+}
